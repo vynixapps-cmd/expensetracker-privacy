@@ -1,309 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Expense Tracker</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: white;
-            min-height: 100vh;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-        }
-
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-
-        .last-updated {
-            color: #999;
-            font-size: 0.9em;
-        }
-
-        h2 {
-            color: #667eea;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            color: #555;
-        }
-
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            color: #555;
-        }
-
-        strong {
-            color: #333;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .contact-info {
-            background: #f5f5f5;
-            padding: 20px;
-            border-left: 4px solid #667eea;
-            margin: 30px 0;
-            border-radius: 4px;
-        }
-
-        .contact-info h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #764ba2;
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #f0f0f0;
-            color: #999;
-            font-size: 0.9em;
-        }
-
-        .toc {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 4px;
-            margin: 30px 0;
-        }
-
-        .toc h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .toc ol {
-            margin-left: 20px;
-        }
-
-        .toc li {
-            margin-bottom: 8px;
-        }
-
-        .toc a {
-            color: #667eea;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px 15px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Expense Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #6366f1;
+      --primary-light: #eef2ff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --card: #f8fafc;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    header {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border-radius: 100px;
+      padding: 4px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    header h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; margin-bottom: 12px; }
+    header p { font-size: 16px; opacity: 0.85; max-width: 480px; margin: 0 auto; }
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+    .toc {
+      background: var(--primary-light);
+      border: 1px solid #c7d2fe;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc h2 { font-size: 14px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .toc ol { padding-left: 20px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+    section { margin-bottom: 48px; }
+    section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--primary-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section h2 .num {
+      background: var(--primary);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    p { margin-bottom: 14px; color: #334155; }
+    ul, ol { margin: 12px 0 16px 20px; }
+    li { margin-bottom: 8px; color: #334155; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+    .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .highlight {
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 15px;
+      color: #92400e;
+    }
+    .highlight strong { color: #78350f; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+      padding: 10px 14px;
+      text-align: left;
+      border: 1px solid #c7d2fe;
+    }
+    td { padding: 10px 14px; border: 1px solid var(--border); vertical-align: top; }
+    tr:nth-child(even) td { background: var(--card); }
+    a { color: var(--primary); }
+    .contact-card {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      border-radius: 16px;
+      padding: 28px;
+      color: white;
+      text-align: center;
+    }
+    .contact-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .contact-card p { color: rgba(255,255,255,0.85); margin-bottom: 12px; }
+    .contact-card a { color: white; font-weight: 600; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Privacy Policy</h1>
-            <p class="subtitle">Expense Tracker</p>
-            <p class="last-updated">Last Updated: May 16, 2026</p>
-        </header>
 
-        <div class="toc">
-            <h3>Contents</h3>
-            <ol>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#information-we-collect">Information We Collect</a></li>
-                <li><a href="#how-we-use">How We Use Your Information</a></li>
-                <li><a href="#data-security">Data Security</a></li>
-                <li><a href="#data-sharing">Data Sharing and Disclosure</a></li>
-                <li><a href="#data-retention">Data Retention</a></li>
-                <li><a href="#your-rights">Your Rights</a></li>
-                <li><a href="#third-party">Third-Party Services</a></li>
-                <li><a href="#children">Children's Privacy</a></li>
-                <li><a href="#policy-changes">Changes to This Policy</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ol>
-        </div>
+<header>
+  <div class="badge">Legal Document</div>
+  <h1>Privacy Policy</h1>
+  <p>We respect your privacy and are committed to protecting your personal data.</p>
+  <div class="meta">
+    <span>📱 Expense Tracker</span>
+    <span>📅 Last updated: May 2025</span>
+    <span>🏢 Vynix</span>
+  </div>
+</header>
 
-        <section id="introduction" class="section">
-            <h2>1. Introduction</h2>
-            <p>Welcome to Expense Tracker ("we," "us," "our," or "Company"). We are committed to protecting your privacy and ensuring you have a positive experience on our application. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile and web applications, including any associated services (collectively, the "Service").</p>
-            <p>Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our Service. Your continued use of the Service following the posting of revised Privacy Policy means that you accept and agree to the changes.</p>
-        </section>
+<main>
 
-        <section id="information-we-collect" class="section">
-            <h2>2. Information We Collect</h2>
-            <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
-            
-            <h3 style="color: #764ba2; margin-top: 20px; margin-bottom: 15px;">Personal Data</h3>
-            <p>Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information, such as your age, gender, hometown, and interests, that you voluntarily give to us when you register with the Site or when you choose to participate in various activities related to the Site.</p>
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-we-collect">Data We Collect</a></li>
+      <li><a href="#data-we-dont-collect">Data We Do NOT Collect</a></li>
+      <li><a href="#local-storage">Local Data Storage</a></li>
+      <li><a href="#ads">Advertising (AdMob)</a></li>
+      <li><a href="#firebase">Firebase Services</a></li>
+      <li><a href="#gdpr">GDPR &amp; Your Rights</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#data-security">Data Security</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
 
-            <h3 style="color: #764ba2; margin-top: 20px; margin-bottom: 15px;">Financial Information</h3>
-            <p>Financial information, such as data related to your payment method (e.g., valid credit card number, card brand, expiration date) that we collect when you purchase, order, return, exchange, or request information about our services from the Site. We store limited financial information; most financial information is processed by our payment processor.</p>
-
-            <h3 style="color: #764ba2; margin-top: 20px; margin-bottom: 15px;">Expense Data</h3>
-            <p>Information about your expenses, spending categories, budgets, and financial records that you voluntarily input into the application.</p>
-
-            <h3 style="color: #764ba2; margin-top: 20px; margin-bottom: 15px;">Device Information</h3>
-            <p>We automatically collect certain information about your device when you use our Service, including but not limited to your IP address, browser type, operating system, referring URLs, device identifiers, and pages visited.</p>
-
-            <h3 style="color: #764ba2; margin-top: 20px; margin-bottom: 15px;">Usage Information</h3>
-            <p>We collect information about how you interact with our Service, including the features you use, the actions you take, and the content you engage with.</p>
-
-            <h3 style="color: #764ba2; margin-top: 20px; margin-bottom: 15px;">Cookies and Tracking Technologies</h3>
-            <p>We use cookies, web beacons, pixels, and similar tracking technologies to enhance your experience and understand how you use our Service.</p>
-        </section>
-
-        <section id="how-we-use" class="section">
-            <h2>3. How We Use Your Information</h2>
-            <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:</p>
-            <ul>
-                <li>Create and manage your account</li>
-                <li>Process your transactions and send related information</li>
-                <li>Email you regarding your account or order</li>
-                <li>Fulfill and manage purchases, orders, payments, and other transactions related to the Site</li>
-                <li>Generate a personal profile about you so that future visits to the Site will be personalized as possible</li>
-                <li>Increase the efficiency and operation of the Site</li>
-                <li>Monitor and analyze trends, usage, and activities for marketing and analytical purposes</li>
-                <li>Perform other business activities as needed</li>
-                <li>Improve, test, and enhance the features and functionality of the Site</li>
-                <li>Notify you of updates to the Site</li>
-                <li>Offer new products, services, and/or recommendations to you</li>
-            </ul>
-        </section>
-
-        <section id="data-security" class="section">
-            <h2>4. Data Security</h2>
-            <p>We use administrative, technical, and physical security measures to help protect your personal information. While we have implemented safeguards designed to protect your personal information, please be aware that despite our efforts, no security measures are completely secure.</p>
-            <p>We encrypt sensitive financial information using Secure Socket Layer (SSL) technology. Access to your personal information is restricted to employees, contractors, and service providers who need to know that information in order to operate, develop, or improve our Service.</p>
-        </section>
-
-        <section id="data-sharing" class="section">
-            <h2>5. Data Sharing and Disclosure</h2>
-            <p>We may share your information in the following circumstances:</p>
-            <ul>
-                <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information is necessary to comply with the law, enforce our Site policies, or protect the rights, property, and safety of others.</li>
-                <li><strong>Third-Party Service Providers:</strong> We may share your information with vendors, consultants, and other service providers who need access to such information to carry out work on our behalf.</li>
-                <li><strong>Business Transfers:</strong> If we are involved in a merger, acquisition, or asset sale, your information may be transferred as part of that transaction.</li>
-                <li><strong>With Your Consent:</strong> We may disclose your information for any other purpose with your consent.</li>
-            </ul>
-        </section>
-
-        <section id="data-retention" class="section">
-            <h2>6. Data Retention</h2>
-            <p>We retain personal information for as long as necessary to provide our Service, comply with legal obligations, resolve disputes, and enforce our agreements. The retention period may vary depending on the context of the processing and our legal obligations.</p>
-            <p>When you delete your account, we will remove your personal information from our active databases. However, we may retain certain information for backup, archival, and legal purposes.</p>
-        </section>
-
-        <section id="your-rights" class="section">
-            <h2>7. Your Rights</h2>
-            <p>Depending on your location, you may have the following rights regarding your personal data:</p>
-            <ul>
-                <li><strong>Right of Access:</strong> You have the right to request access to the personal data we hold about you.</li>
-                <li><strong>Right to Rectification:</strong> You have the right to correct inaccurate personal data.</li>
-                <li><strong>Right to Erasure:</strong> You have the right to request deletion of your personal data under certain circumstances.</li>
-                <li><strong>Right to Restrict Processing:</strong> You have the right to request that we restrict the processing of your personal data.</li>
-                <li><strong>Right to Data Portability:</strong> You have the right to receive your personal data in a structured, commonly used, and machine-readable format.</li>
-                <li><strong>Right to Object:</strong> You have the right to object to the processing of your personal data.</li>
-                <li><strong>Right to Withdraw Consent:</strong> If we process your data based on your consent, you have the right to withdraw that consent at any time.</li>
-            </ul>
-            <p>To exercise any of these rights, please contact us using the information provided in the Contact Us section below.</p>
-        </section>
-
-        <section id="third-party" class="section">
-            <h2>8. Third-Party Services</h2>
-            <p>Our Service may contain links to third-party websites and services that are not operated by us. This Privacy Policy applies only to information collected through our Service, and we are not responsible for the privacy practices of third-party services.</p>
-            <p>We may use third-party service providers to assist us in operating our website and conducting our business, subject to confidentiality agreements. These service providers are obligated to maintain the confidentiality of your information.</p>
-        </section>
-
-        <section id="children" class="section">
-            <h2>9. Children's Privacy</h2>
-            <p>Our Service is not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18. If we become aware that a child under 18 has provided us with personal information, we will take steps to delete such information and terminate the child's account.</p>
-            <p>If you believe we have collected information from a child under 18, please contact us immediately using the information in the Contact Us section.</p>
-        </section>
-
-        <section id="policy-changes" class="section">
-            <h2>10. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons. The "Last Updated" date at the top of this Privacy Policy indicates when it was most recently revised.</p>
-            <p>Your continued use of our Service following the posting of revised Privacy Policy means that you accept and agree to the changes. We will notify you of any material changes by updating the Last Updated date of this Privacy Policy.</p>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>11. Contact Us</h2>
-            <p>If you have questions or comments about this Privacy Policy, or if you would like to exercise any of your rights regarding your personal information, please contact us at:</p>
-            
-            <div class="contact-info">
-                <h3>Expense Tracker Support</h3>
-                <p><strong>Email:</strong> <a href="mailto:privacy@expensetracker.app">privacy@expensetracker.app</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/vynixapps-cmd/expensetracker-privacy" target="_blank">github.com/vynixapps-cmd/expensetracker-privacy</a></p>
-                <p>We will respond to your inquiry within 30 days of receipt.</p>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Expense Tracker. All rights reserved.</p>
-            <p>This privacy policy is provided as-is and may be updated at any time.</p>
-        </footer>
+  <!-- 1 -->
+  <section id="overview">
+    <h2><span class="num">1</span> Overview</h2>
+    <p>
+      Expense Tracker ("the App") is a personal finance management application developed by <strong>Vynix</strong>
+      ("we", "us", or "our"). This Privacy Policy explains how we handle information when you use our App.
+    </p>
+    <div class="highlight">
+      <strong>Short version:</strong> Your financial data never leaves your device. We do not have servers
+      that store your transactions, budgets, or accounts. Everything is saved locally on your phone.
     </div>
+    <p>
+      By using the App, you agree to the practices described in this Privacy Policy.
+    </p>
+  </section>
+
+  <!-- 2 -->
+  <section id="data-we-collect">
+    <h2><span class="num">2</span> Data We Collect</h2>
+    <p>We collect minimal data, only what is necessary to display relevant advertisements:</p>
+
+    <table>
+      <thead>
+        <tr><th>Data Type</th><th>Purpose</th><th>Collected By</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Advertising ID (GAID)</td>
+          <td>Show personalised ads</td>
+          <td>Google AdMob &amp; mediation partners</td>
+        </tr>
+        <tr>
+          <td>Approximate location</td>
+          <td>Region-appropriate ads &amp; GDPR consent detection</td>
+          <td>Google AdMob</td>
+        </tr>
+        <tr>
+          <td>Device information</td>
+          <td>Ad rendering, crash diagnostics</td>
+          <td>Google AdMob</td>
+        </tr>
+        <tr>
+          <td>App interaction data</td>
+          <td>Improve ad relevance</td>
+          <td>Google AdMob</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      All ad-related data collection is subject to your consent, which is requested on first launch via
+      Google's User Messaging Platform (UMP). You can update your consent choices at any time in the app settings.
+    </p>
+  </section>
+
+  <!-- 3 -->
+  <section id="data-we-dont-collect">
+    <h2><span class="num">3</span> Data We Do NOT Collect</h2>
+    <p>We want to be explicit about what we <strong>never</strong> collect:</p>
+    <ul>
+      <li>❌ Your transaction history, amounts, or financial data</li>
+      <li>❌ Your name, email address, or any personally identifiable information</li>
+      <li>❌ Your bank account details or card numbers</li>
+      <li>❌ Your contacts, photos, or files</li>
+      <li>❌ Your precise GPS location</li>
+      <li>❌ Audio or camera data</li>
+      <li>❌ Login credentials or passwords</li>
+    </ul>
+    <p>No account or login is required to use Expense Tracker.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="local-storage">
+    <h2><span class="num">4</span> Local Data Storage</h2>
+    <p>
+      All your financial data — transactions, categories, accounts, budgets, and preferences — is stored
+      exclusively in a local SQLite database on your device using Android's Room library.
+    </p>
+
+    <div class="card">
+      <h3>📱 What is stored on your device</h3>
+      <ul>
+        <li>Transactions (amount, title, category, date, notes, tags)</li>
+        <li>Budget limits and spending history</li>
+        <li>Account names and balances</li>
+        <li>App settings (currency, theme preference)</li>
+        <li>Custom categories</li>
+      </ul>
+    </div>
+
+    <p>
+      This data is <strong>never transmitted to our servers</strong>. It is only accessible to the App
+      on your device. If you uninstall the App, all locally stored data is permanently deleted.
+    </p>
+    <p>
+      The Export and Backup features allow <em>you</em> to copy your own data (as CSV or JSON) to share
+      or store wherever you choose — this is fully under your control.
+    </p>
+  </section>
+
+  <!-- 5 -->
+  <section id="ads">
+    <h2><span class="num">5</span> Advertising (AdMob)</h2>
+    <p>
+      Expense Tracker is free to use and is supported by advertising. We use
+      <strong>Google AdMob</strong> and its mediation partners to display ads.
+    </p>
+
+    <div class="card">
+      <h3>🤝 Ad Mediation Partners</h3>
+      <p>AdMob may use the following ad networks to serve ads:</p>
+      <ul>
+        <li>Meta Audience Network</li>
+        <li>AppLovin</li>
+        <li>Unity Ads</li>
+        <li>ironSource</li>
+        <li>Pangle (TikTok for Business)</li>
+        <li>Vungle (Liftoff)</li>
+      </ul>
+    </div>
+
+    <p>Each of these partners has their own privacy policies governing data use. Links:</p>
+    <ul>
+      <li><a href="https://www.facebook.com/privacy/policy/" target="_blank">Meta Privacy Policy</a></li>
+      <li><a href="https://www.applovin.com/privacy/" target="_blank">AppLovin Privacy Policy</a></li>
+      <li><a href="https://unity.com/legal/privacy-policy" target="_blank">Unity Privacy Policy</a></li>
+      <li><a href="https://www.ironsrc.com/privacy-policy/" target="_blank">ironSource Privacy Policy</a></li>
+      <li><a href="https://www.pangleglobal.com/privacy" target="_blank">Pangle Privacy Policy</a></li>
+      <li><a href="https://vungle.com/privacy/" target="_blank">Vungle Privacy Policy</a></li>
+      <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+    </ul>
+
+    <p>
+      You can opt out of personalised advertising at any time by:
+    </p>
+    <ul>
+      <li>Tapping the Privacy Options button in Settings (EU/EEA users)</li>
+      <li>Going to your device Settings → Google → Ads → Delete advertising ID</li>
+    </ul>
+  </section>
+
+  <!-- 6 -->
+  <section id="firebase">
+    <h2><span class="num">6</span> Firebase Services</h2>
+    <p>We use <strong>Google Firebase Realtime Database</strong> for one purpose only:</p>
+    <div class="card">
+      <h3>🔧 Ad Configuration</h3>
+      <p>
+        Firebase is used to remotely manage ad unit IDs and ad settings. This allows us to update
+        ad configurations without requiring an app update. <strong>No personal data or financial
+        information is ever written to Firebase.</strong>
+      </p>
+    </div>
+    <p>Firebase is governed by <a href="https://firebase.google.com/support/privacy" target="_blank">Google's Firebase Privacy Policy</a>.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="gdpr">
+    <h2><span class="num">7</span> GDPR &amp; Your Rights</h2>
+    <p>
+      If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland,
+      you have rights under the General Data Protection Regulation (GDPR):
+    </p>
+    <ul>
+      <li><strong>Right of access</strong> — Request a copy of data we hold about you</li>
+      <li><strong>Right to rectification</strong> — Request correction of inaccurate data</li>
+      <li><strong>Right to erasure</strong> — Request deletion of your data ("right to be forgotten")</li>
+      <li><strong>Right to restriction</strong> — Request restriction of processing</li>
+      <li><strong>Right to data portability</strong> — Export your data (use the in-app Export feature)</li>
+      <li><strong>Right to object</strong> — Object to data processing for advertising</li>
+      <li><strong>Right to withdraw consent</strong> — Withdraw ad consent via Settings → Privacy Options</li>
+    </ul>
+    <p>
+      Since all financial data is stored locally on your device, you can exercise the right to erasure
+      by simply uninstalling the App, which permanently deletes all local data.
+    </p>
+    <p>
+      For ad-related data rights, please contact Google AdMob and the respective ad networks listed above.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section id="children">
+    <h2><span class="num">8</span> Children's Privacy</h2>
+    <p>
+      Expense Tracker is not directed at children under the age of 13 (or 16 in the EEA).
+      We do not knowingly collect personal information from children.
+      If you believe a child has provided us with personal information, please contact us
+      immediately and we will take steps to delete such information.
+    </p>
+  </section>
+
+  <!-- 9 -->
+  <section id="data-security">
+    <h2><span class="num">9</span> Data Security</h2>
+    <p>
+      We take security seriously. Your financial data is protected by:
+    </p>
+    <ul>
+      <li>Local-only storage — data never transmitted to external servers</li>
+      <li>Android's application sandboxing — other apps cannot access Expense Tracker's data</li>
+      <li>Android's built-in encryption when device encryption is enabled</li>
+    </ul>
+    <p>
+      No method of electronic storage is 100% secure. While we strive to protect your information,
+      we cannot guarantee absolute security. We recommend enabling device PIN/biometric lock
+      as an additional layer of protection.
+    </p>
+  </section>
+
+  <!-- 10 -->
+  <section id="changes">
+    <h2><span class="num">10</span> Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we make significant changes,
+      we will update the "Last updated" date at the top of this page.
+      We encourage you to review this Privacy Policy periodically.
+    </p>
+    <p>
+      Continued use of the App after changes are posted constitutes your acceptance of the updated policy.
+    </p>
+  </section>
+
+  <!-- 11 -->
+  <section id="contact">
+    <h2><span class="num">11</span> Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+    <div class="contact-card">
+      <h3>Vynix — Expense Tracker</h3>
+      <p>We aim to respond within 48 hours.</p>
+      <a href="mailto:vynixapps@gmail.com">vynixapps@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Vynix. All rights reserved. &nbsp;|&nbsp;
+  <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+</footer>
+
 </body>
 </html>
